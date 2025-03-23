@@ -68,10 +68,7 @@ Follow these steps to set up and run the MPE project on your system.
 ### 1. Clone the Repository
 
 Clone the repository to your local machine:
-
-git clone https://github.com/yourusername/FlightLLM-MPE.git
-cd FlightLLM-MPE
 ```bash
-git clone https://github.com/yourusername/FlightLLM-MPE.git
-cd FlightLLM-MPE
+git clone https://github.com/yourusername/Unified-Matrix-Processing-Engine.git
+cd Unified-Matrix-Processing-Engine
 ```
