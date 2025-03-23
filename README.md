@@ -36,25 +36,39 @@ The **Matrix Processing Engine (MPE)** is a core component of the FlightLLM syst
 
 The repository is organized to ensure clarity and ease of navigation. Below is the structure of the `MPE` project, with descriptions for each directory and key file:
 
-MPE/
-├── docs/
-│   ├── architecture.md       # Overview of the MPE architecture and design principles
-│   ├── usage.md              # Step-by-step guide for setting up and using the MPE
-│   └── api.md                # API reference detailing module parameters, inputs, and outputs
-├── src/
-│   ├── MPE.v                 # Top-level module for the Matrix Processing Engine
-│   ├── MPU.v                 # Matrix Processing Unit, managing multiple VPUs
-│   ├── VPU.v                 # Vector Processing Unit, implementing the CSD-Chain
-│   ├── DSP_Group.v           # DSP Group module for computation with DSP48 cores
-│   ├── Sparse_MUX.v          # Sparse multiplexer for selecting non-zero elements
-│   ├── Reduction_Node.v      # Reduction node for handling sparse operation outputs
-│   └── Overflow_Adjust_Unit.v# Unit for adjusting overflow in DSP accumulations
-├── test/
-│   ├── tb_MPE.v              # Testbench for the top-level MPE module
-│   ├── tb_MPU.v              # Testbench for the MPU module
-│   └── ...                   # Additional testbenches for other submodules
-├── scripts/
-│   └── build.sh              # Shell script for synthesis and simulation with Vivado
-├── LICENSE                   # MIT License file for the project
-├── CONTRIBUTING.md           # Guidelines for contributing to the project
-└── README.md                 # Project overview and setup instructions (this file)
+
+### Directory and File Descriptions
+
+| Directory/File       | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `docs/`              | Contains detailed documentation for understanding and using the MPE.       |
+| `src/`               | Houses all Verilog source files, organized by module hierarchy.            |
+| `test/`              | Includes testbenches for simulation and verification of each module.       |
+| `scripts/`           | Provides automation scripts for synthesis, simulation, and implementation. |
+| `LICENSE`            | Specifies the MIT License under which the project is distributed.          |
+| `CONTRIBUTING.md`    | Outlines the process for contributing to the project.                      |
+| `README.md`          | The main project overview, including setup and usage instructions.         |
+
+This structure ensures that all components of the project are well-organized, making it easy for users to find source code, testbenches, documentation, and supporting scripts.
+
+## Prerequisites
+
+To use this project, ensure you have the following tools and hardware:
+
+- **FPGA Development Board**: Compatible with Xilinx FPGAs (e.g., Ultrascale+).
+- **Xilinx Vivado Design Suite**: For synthesis, implementation, and simulation (version 2022.1 or later recommended).
+- **Verilog Simulator**: Vivado Simulator, ModelSim, or similar.
+- **Git**: To clone the repository.
+- **Operating System**: Linux (Ubuntu 20.04 or later) or Windows 10/11.
+
+## Getting Started
+
+Follow these steps to set up and run the MPE project on your system.
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine:
+
+git clone https://github.com/yourusername/FlightLLM-MPE.git
+cd FlightLLM-MPE
+
