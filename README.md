@@ -71,4 +71,7 @@ Clone the repository to your local machine:
 
 git clone https://github.com/yourusername/FlightLLM-MPE.git
 cd FlightLLM-MPE
-
+```bash
+git clone https://github.com/yourusername/FlightLLM-MPE.git
+cd FlightLLM-MPE
+```
