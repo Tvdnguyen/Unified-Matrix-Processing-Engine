@@ -32,29 +32,28 @@ The **Matrix Processing Engine (MPE)** is a core component of the FlightLLM syst
 - **Scalability**: Modular design with configurable numbers of Matrix Processing Units (MPUs) and Vector Processing Units (VPUs).
 
 ## Project Structure
-MPE/
-├── docs/
-│   ├── architecture.md        # Detailed architecture overview
-│   ├── usage.md              # Usage instructions
-│   └── api.md                # API reference for modules
-├── src/
-│   ├── MPE.v                 # Top-level MPE module
-│   ├── MPU.v                 # Matrix Processing Unit
-│   ├── VPU.v                 # Vector Processing Unit
-│   ├── DSP_Group.v           # DSP Group for computation
-│   ├── Sparse_MUX.v          # Sparse multiplexer
-│   ├── Reduction_Node.v      # Reduction node for sparse operations
-│   └── Overflow_Adjust_Unit.v# Overflow adjustment unit
-├── test/
-│   ├── tb_MPE.v              # Testbench for MPE
-│   ├── tb_MPU.v              # Testbench for MPU
-│   └── ...                   # Testbenches for other modules
-├── scripts/
-│   └── build.sh              # Script for synthesis and simulation
-├── LICENSE                   # MIT License
-├── CONTRIBUTING.md           # Contribution guidelines
-└── README.md                 # Project overview (this file)
-
+FlightLLM-MPE/
+├── docs/                     # Documentation files for the project
+│   ├── architecture.md       # Overview of the MPE architecture and design principles
+│   ├── usage.md              # Step-by-step guide for setting up and using the MPE
+│   └── api.md                # API reference detailing module parameters, inputs, and outputs
+├── src/                      # Source code for the MPE implementation in Verilog
+│   ├── MPE.v                 # Top-level module for the Matrix Processing Engine
+│   ├── MPU.v                 # Matrix Processing Unit, managing multiple VPUs
+│   ├── VPU.v                 # Vector Processing Unit, implementing the CSD-Chain
+│   ├── DSP_Group.v           # DSP Group module for computation with DSP48 cores
+│   ├── Sparse_MUX.v          # Sparse multiplexer for selecting non-zero elements
+│   ├── Reduction_Node.v      # Reduction node for handling sparse operation outputs
+│   └── Overflow_Adjust_Unit.v# Unit for adjusting overflow in DSP accumulations
+├── test/                     # Testbenches for verifying module functionality
+│   ├── tb_MPE.v              # Testbench for the top-level MPE module
+│   ├── tb_MPU.v              # Testbench for the MPU module
+│   └── ...                   # Additional testbenches for other submodules
+├── scripts/                  # Scripts for automation
+│   └── build.sh              # Shell script for synthesis and simulation with Vivado
+├── LICENSE                   # MIT License file for the project
+├── CONTRIBUTING.md           # Guidelines for contributing to the project
+└── README.md                 # Project overview and setup instructions (this file)
 
 
 ## Prerequisites
