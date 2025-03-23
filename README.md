@@ -35,3 +35,49 @@ The **Matrix Processing Engine (MPE)** is a core component of the FlightLLM syst
 - **Scalability**: Modular design with configurable numbers of Matrix Processing Units (MPUs) and Vector Processing Units (VPUs).
 
 ## Project Structure
+MPE/
+├── docs/
+│   ├── architecture.md        # Detailed architecture overview
+│   ├── usage.md              # Usage instructions
+│   └── api.md                # API reference for modules
+├── src/
+│   ├── MPE.v                 # Top-level MPE module
+│   ├── MPU.v                 # Matrix Processing Unit
+│   ├── VPU.v                 # Vector Processing Unit
+│   ├── DSP_Group.v           # DSP Group for computation
+│   ├── Sparse_MUX.v          # Sparse multiplexer
+│   ├── Reduction_Node.v      # Reduction node for sparse operations
+│   └── Overflow_Adjust_Unit.v# Overflow adjustment unit
+├── test/
+│   ├── tb_MPE.v              # Testbench for MPE
+│   ├── tb_MPU.v              # Testbench for MPU
+│   └── ...                   # Testbenches for other modules
+├── scripts/
+│   └── build.sh              # Script for synthesis and simulation
+├── LICENSE                   # MIT License
+├── CONTRIBUTING.md           # Contribution guidelines
+└── README.md                 # Project overview (this file)
+
+
+
+## Prerequisites
+
+To use this project, ensure you have the following tools and hardware:
+
+- **FPGA Development Board**: Compatible with Xilinx FPGAs (e.g., Ultrascale+).
+- **Xilinx Vivado Design Suite**: For synthesis, implementation, and simulation (version 2022.1 or later recommended).
+- **Verilog Simulator**: Vivado Simulator, ModelSim, or similar.
+- **Git**: To clone the repository.
+- **Operating System**: Linux (Ubuntu 20.04 or later) or Windows 10/11.
+
+## Getting Started
+
+Follow these steps to set up and run the MPE project on your system.
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/FlightLLM-MPE.git
+cd FlightLLM-MPE
