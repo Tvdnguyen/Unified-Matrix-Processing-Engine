@@ -26,7 +26,6 @@ The repository is organized to ensure clarity and ease of navigation. Below is t
 |----------------------|-----------------------------------------------------------------------------|
 | `docs/`              | Contains detailed documentation for understanding and using the MPE.       |
 | `src/`               | Houses all Verilog source files, organized by module hierarchy.            |
-| Outlines the process for contributing to the project.                      |
 | `README.md`          | The main project overview, including setup and usage instructions.         |
 
 This structure ensures that all components of the project are well-organized, making it easy for users to find source code, testbenches, documentation, and supporting scripts.
