@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // Module: VPU (Vector Processing Unit)
 // Author: Nguyen Trinh
-// Created: March 23, 2025
+// Created: March 12, 2025
 // Last Updated: March 23, 2025
 // Description:
 //   The Vector Processing Unit (VPU) computes a dot product of two vectors (one row
