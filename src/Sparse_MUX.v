@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // Module: Sparse_MUX
 // Author: Nguyen Trinh
-// Created: March 23, 2025
+// Created: March 10, 2025
 // Last Updated: March 23, 2025
 // Description:
 //   Sparse Multiplexer selects input data based on sparse_index.
